@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRNetflix </title>
+    <link rel="stylesheet" href="Pelis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+
+    <header class="header">
+        <nav>
+            <img src="Img/logo.png" class="logo">
+            <div>
+                <a href="#"><img src="Img/language.png" class="language-img">Español <img src="Img/down-arrow.png"
+                        class="arrow"></a>
+                <a href="index.html">Cerrar sesion</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sección Populares -->
+        <section>
+            <h3 class="sub-title">Populares</h3>
+            <div class="swiper upcoming-movies">
+                <div class="swiper-wrapper" id="popular-movies"></div>
+                <div class="swiper-button-prev upcoming-movies-prev"></div>
+                <div class="swiper-button-next tv-popular-movies-next"></div>
+            </div>
+        </section>
+
+
+
+        <!-- Sección Tendencias -->
+        <section>
+            <h2 class="sub-title">Tendencias</h2>
+            <div class="swiper tv-popular-movies">
+                <div class="swiper-wrapper" id="trending-movies"></div>
+                <div class="swiper-button-prev tv-popular-movies-prev"></div>
+                <div class="swiper-button-next tv-popular-movies-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Animadas -->
+        <section>
+            <h2 class="sub-title">Animadas</h2>
+            <div class="swiper upcoming-movies">
+                <div class="swiper-wrapper" id="animated-movies"></div>
+                <div class="swiper-button-prev tv-popular-movies-prev"></div>
+                <div class="swiper-button-next tv-popular-movies-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Proxima mente -->
+        <section>
+            <h3 class="sub-title">Próximamente</h3>
+            <div class="swiper upcoming-movies">
+                <div class="swiper-wrapper" id="upcoming-movies"></div>
+                <div class="swiper-button-prev upcoming-movies-prev"></div>
+                <div class="swiper-button-next upcoming-movies-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Mejor Puntuadas -->
+        <section>
+            <h3 class="sub-title">Mejor Puntuadas</h3>
+            <div class="swiper top-rated-movies">
+                <div class="swiper-wrapper" id="top-rated-movies"></div>
+                <div class="swiper-button-prev top-rated-movies-prev"></div>
+                <div class="swiper-button-next top-rated-movies-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Series Populares -->
+        <section>
+            <h3 class="sub-title">Series Populares</h3>
+            <div class="swiper tv-popular-movies">
+                <div class="swiper-wrapper" id="tv-popular-movies"></div>
+                <div class="swiper-button-prev tv-popular-movies-prev"></div>
+                <div class="swiper-button-next tv-popular-movies-next"></div>
+
+            </div>
+        </section>
+
+        <!-- Sección Las 10 películas más populares hoy -->
+        <section>
+            <h3 class="sub-title">Las 20 películas más populares hoy</h3>
+            <div class="swiper top10-swiper">
+                <div class="swiper-wrapper" id="top10-movies"></div>
+                <div class="swiper-button-prev top10-prev"></div>
+                <div class="swiper-button-next top10-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Accion -->
+        <section>
+            <h3 class="sub-title">Accion</h3>
+            <div class="swiper adult-movies">
+                <div class="swiper-wrapper" id="adult-movies"></div>
+                <div class="swiper-button-prev adult-movies-prev"></div>
+                <div class="swiper-button-next adult-movies-next"></div>
+            </div>
+        </section>
+
+        <!-- Sección Películas Favoritas -->
+        <section>
+            <h3 class="sub-title">Mis Películas Favoritas</h3>
+            <div class="swiper liked-movies">
+                <div class="swiper-wrapper" id="liked-movies"></div>
+                <div class="swiper-button-prev liked-movies-prev"></div>
+                <div class="swiper-button-next liked-movies-next"></div>
+            </div>
+        </section>
+        
+        
+
+        <!-- Modal para mostrar la información de la película -->
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                
+                <div class="modal-body">
+                    <!-- Lado Izquierdo -->
+                    <div class="modal-left">
+                        <iframe id="trailer" width="100%" height="250" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+        
+                    <!-- Lado Derecho -->
+                    <div class="modal-right">
+                        <h2 id="movieTitle"></h2>
+                        <p id="movieDescription"></p>
+                    </div>
+                </div>
+        
+                <!-- Recomendaciones -->
+                <div class="modal-recommendations">
+                    <h3>Recomendaciones:</h3>
+                    <div id="recommendations" class="recommendations"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <script src="App.js"></script>
+
+
+</body>
+
+</html>
