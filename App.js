@@ -210,3 +210,5 @@ function renderLikedMovies() {
 
 document.addEventListener("DOMContentLoaded", renderLikedMovies);
 
+
+

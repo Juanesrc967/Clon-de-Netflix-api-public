@@ -24,7 +24,17 @@
         </nav>
     </header>
 
-    <main>
+    <main class="pelis">
+
+        <!-- Sección Películas Favoritas -->
+        <section>
+            <h3 class="sub-title">Mis Películas Favoritas</h3>
+            <div class="swiper liked-movies">
+                <div class="swiper-wrapper" id="liked-movies"></div>
+                <div class="swiper-button-prev liked-movies-prev"></div>
+                <div class="swiper-button-next liked-movies-next"></div>
+            </div>
+        </section>
 
         <!-- Sección Populares -->
         <section>
@@ -109,36 +119,24 @@
             </div>
         </section>
 
-        <!-- Sección Películas Favoritas -->
-        <section>
-            <h3 class="sub-title">Mis Películas Favoritas</h3>
-            <div class="swiper liked-movies">
-                <div class="swiper-wrapper" id="liked-movies"></div>
-                <div class="swiper-button-prev liked-movies-prev"></div>
-                <div class="swiper-button-next liked-movies-next"></div>
-            </div>
-        </section>
-        
-        
-
         <!-- Modal para mostrar la información de la película -->
         <div id="movieModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                
+
                 <div class="modal-body">
                     <!-- Lado Izquierdo -->
                     <div class="modal-left">
                         <iframe id="trailer" width="100%" height="250" src="" frameborder="0" allowfullscreen></iframe>
                     </div>
-        
+
                     <!-- Lado Derecho -->
                     <div class="modal-right">
                         <h2 id="movieTitle"></h2>
                         <p id="movieDescription"></p>
                     </div>
                 </div>
-        
+
                 <!-- Recomendaciones -->
                 <div class="modal-recommendations">
                     <h3>Recomendaciones:</h3>
